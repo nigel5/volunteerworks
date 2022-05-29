@@ -9,7 +9,6 @@ export const JobProvider = ({ children }) => {
         fetch(`/api/job`)
             .then(res => res.json())
             .then(res => {
-                console.log(res);
                 setJobs(res);
             });
     }, []);
