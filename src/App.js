@@ -10,7 +10,7 @@ import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import { PersonFill } from 'react-bootstrap-icons';
 import JobCard from './components/jobCard';
-import Sidebar from "./components/sidebar";
+import Sidebar from "./components/sidebar2";
 import {JobContext} from "./context/jobContext";
 import JobDetail from "./components/jobDetail";
 
@@ -56,25 +56,7 @@ function App() {
                   </Row>
                 </Card>
               </Row>
-              <Row>
-                <Card style={{color: "#000", textAlign: 'left'}}>
-                  <Card.Body>
-                    <Row className="align-items-center">
-                    <Col>
-                    <Card.Title>Volunteer Soccer Coach</Card.Title>
-                    <Card.Text style={{fontSize: 15}}>Scarborough, ON</Card.Text>
-                    <Card.Text style={{fontSize: 15}}>Scarborough Eastsiders Soccer</Card.Text>
-                    <Card.Text style={{fontSize: 15}}>Monday, May 30, 2022</Card.Text>
-                    <Card.Text style={{fontSize: 15}}>6:00 PM - 8:00 PM</Card.Text>
-                    </Col>
-                    <Col >
-                      <Card.Text style={{color: 'green', fontSize: 15, textAlign: 'right'}}>4 Positions Available</Card.Text>
-                    </Col>
-                    </Row>
-                  </Card.Body>
-                </Card>
-              </Row>
-              <JobCard name="Volunteer English Teacher" city="Toronto, ON" org="York West Active Living Centre" date="Thursday, June 2, 2022" time="9:30 AM - 10:30 AM" numPos="1"/>
+              <Sidebar/>
             </Container>
           </Col >
           <Col className="p-0">
