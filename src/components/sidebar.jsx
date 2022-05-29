@@ -3,18 +3,19 @@ import ReactDOM from "react-dom";
 import JobDetail from "./jobDetail";
 import {JobContext} from "../context/jobContext";
 import moment from "moment";
+import {ListGroup} from "react-bootstrap";
+import JobEntry from "./jobEntry";
 
 function Sidebar() {
     const context = React.useContext(JobContext);
     return (
-        <div>
+        <ListGroup>
             {
                 Object.keys(context.jobs).map((vx, i) => {
                     const v = context.jobs[i];
-                    console.log(v[i])
                     let updatedOn = moment(v.updatedOn);
                     let neededOn = moment(v.date);
-                    return <JobDetail key={i}
+                    return <JobEntry key={i}
                                       title={v.title}
                                       address={v.address}
                                       posted={updatedOn.format("MMM Do YYYY")}
@@ -26,7 +27,7 @@ function Sidebar() {
 
                 })
             }
-        </div>
+        </ListGroup>
     );
 }
 
